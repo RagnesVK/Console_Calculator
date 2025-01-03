@@ -1,6 +1,6 @@
 ﻿using System;
 
-Console.WriteLine("\n\tWelcome!\n\tLet's do some math? :)");
+Console.WriteLine("\n\tSeja bem vindo!\n\tVamos calcular? :)");
 void drawLine()
 {
     Console.WriteLine("-----------------------------------");
@@ -13,11 +13,11 @@ int answer = 0;
 while (true)
 {
     drawLine();
-    Console.WriteLine("Choose which math operation you want to perform:");
+    Console.WriteLine("Escolha a operação matemática:");
     drawLine();
-    Console.WriteLine("\tAddition (+)\n\tSubtraction (-)\n\tMultiplication (*)\n\tDivision (/)");
+    Console.WriteLine("\tAdição (+)\n\tSubtração (-)\n\tMultiplicação (*)\n\tDivisão (/)");
     drawLine();
-    Console.WriteLine("Type the desired math symbol.");
+    Console.WriteLine("Digite o símbolo correspondente.");
     drawLine();
 
     num1 = answer;
@@ -28,30 +28,30 @@ while (true)
         case "+":
             mathOperation = "+";
             drawLine();
-            Console.WriteLine("\tChose addition!");
+            Console.WriteLine("\tAdição escolhida!");
             drawLine();
             break;
         case "-":
             mathOperation = "-";
             drawLine();
-            Console.WriteLine("\tChose subtraction!");
+            Console.WriteLine("\tSubtração escolhida!");
             drawLine();
             break;
         case "*":
             mathOperation = "*";
             drawLine();
-            Console.WriteLine("\tChose multiplication!");
+            Console.WriteLine("\tMultiplicação escolhida!");
             drawLine();
             break;
         case "/":
             mathOperation = "/";
             drawLine();
-            Console.WriteLine("\tChose division!");
+            Console.WriteLine("\tDivisão escolhida!");
             drawLine();
             break;
         default:
             drawLine();
-            Console.WriteLine("\tSymbol not suported yet.\n\tTry again!");
+            Console.WriteLine("\tSímbolo não suportado.\n\tTente novamente!");
             drawLine();
             continue;
     }
@@ -59,12 +59,12 @@ while (true)
     if (num1 == 0)
     {
         drawLine();
-        Console.WriteLine("Type the first number.");
+        Console.WriteLine("Digite o primeiro número.");
         drawLine();
         while (int.TryParse(Console.ReadLine(), out int getNumber1))
         {
             drawLine();
-            Console.WriteLine($"\tTyped number: {getNumber1}");
+            Console.WriteLine($"\tNúmero selecionado: {getNumber1}");
             drawLine();
             num1 = getNumber1;
             break;
@@ -72,12 +72,12 @@ while (true)
     }
 
     drawLine();
-    Console.WriteLine("Type the next number.");
+    Console.WriteLine("Digite o próximo número.");
     drawLine();
     while (int.TryParse(Console.ReadLine(), out int getNumber2))
     {
         drawLine();
-        Console.WriteLine($"\tTyped Number: {getNumber2}");
+        Console.WriteLine($"\tNúmero selecionado: {getNumber2}");
         drawLine();
         num2 = getNumber2;
         break;
@@ -99,7 +99,7 @@ while (true)
             if ((num1 == 0) || (num2 == 0))
             {
                 drawLine();
-                Console.WriteLine("\tImpossible divide by zero! :(\n\tRestarting...");
+                Console.WriteLine("\tImpossível dividir por zero! :(\n\tReiniciando...");
                 drawLine();
                 continue;
             }
@@ -111,22 +111,22 @@ while (true)
 
     }
     drawLine();
-    Console.WriteLine($"\tResult: {answer}");
+    Console.WriteLine($"\tResultado: {answer}");
     drawLine();
     drawLine();
-    Console.WriteLine("Continue the operation? (Y ou N).");
+    Console.WriteLine("Continuar a operação? (S ou N).");
     drawLine();
 
     switch (Console.ReadLine()?.ToLower())
     {
-        case "y":
+        case "s":
             drawLine();
-            Console.WriteLine("Storing results...");
+            Console.WriteLine("Armazenando resultado...");
             drawLine();
             continue;
         case "n":
             drawLine();
-            Console.WriteLine("Finishing...");
+            Console.WriteLine("Finalizando...");
             drawLine();
             break;
     }
