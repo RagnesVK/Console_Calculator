@@ -1,87 +1,87 @@
-﻿using System;
+﻿
+
 
 Console.WriteLine("\n\tSeja bem vindo!\n\tVamos calcular? :)");
-void drawLine()
+void DrawLine()
 {
     Console.WriteLine("-----------------------------------");
 }
 
-int num1 = 0;
 int num2 = 0;
 int answer = 0;
 
 while (true)
 {
-    drawLine();
+    DrawLine();
     Console.WriteLine("Escolha a operação matemática:");
-    drawLine();
+    DrawLine();
     Console.WriteLine("\tAdição (+)\n\tSubtração (-)\n\tMultiplicação (*)\n\tDivisão (/)");
-    drawLine();
+    DrawLine();
     Console.WriteLine("Digite o símbolo correspondente.");
-    drawLine();
+    DrawLine();
 
-    num1 = answer;
+    var num1 = answer;
     string mathOperation = "null";
 
     switch (Console.ReadLine())
     {
         case "+":
             mathOperation = "+";
-            drawLine();
+            DrawLine();
             Console.WriteLine("\tAdição escolhida!");
-            drawLine();
+            DrawLine();
             break;
         case "-":
             mathOperation = "-";
-            drawLine();
+            DrawLine();
             Console.WriteLine("\tSubtração escolhida!");
-            drawLine();
+            DrawLine();
             break;
         case "*":
             mathOperation = "*";
-            drawLine();
+            DrawLine();
             Console.WriteLine("\tMultiplicação escolhida!");
-            drawLine();
+            DrawLine();
             break;
         case "/":
             mathOperation = "/";
-            drawLine();
+            DrawLine();
             Console.WriteLine("\tDivisão escolhida!");
-            drawLine();
+            DrawLine();
             break;
         default:
-            drawLine();
+            DrawLine();
             Console.WriteLine("\tSímbolo não suportado.\n\tTente novamente!");
-            drawLine();
+            DrawLine();
             continue;
     }
 
     if (num1 == 0)
     {
-        drawLine();
+        DrawLine();
         Console.WriteLine("Digite o primeiro número.");
-        drawLine();
+        DrawLine();
         while (int.TryParse(Console.ReadLine(), out int getNumber1))
         {
-            drawLine();
+            DrawLine();
             Console.WriteLine($"\tNúmero selecionado: {getNumber1}");
-            drawLine();
+            DrawLine();
             num1 = getNumber1;
             break;
-        };
+        }
     }
 
-    drawLine();
+    DrawLine();
     Console.WriteLine("Digite o próximo número.");
-    drawLine();
+    DrawLine();
     while (int.TryParse(Console.ReadLine(), out int getNumber2))
     {
-        drawLine();
+        DrawLine();
         Console.WriteLine($"\tNúmero selecionado: {getNumber2}");
-        drawLine();
+        DrawLine();
         num2 = getNumber2;
         break;
-    };
+    }
 
     Console.WriteLine($"----------- [ {num1} {mathOperation} {num2} ] -----------");
     switch (mathOperation)
@@ -98,9 +98,9 @@ while (true)
         case "/":
             if ((num1 == 0) || (num2 == 0))
             {
-                drawLine();
+                DrawLine();
                 Console.WriteLine("\tImpossível dividir por zero! :(\n\tReiniciando...");
-                drawLine();
+                DrawLine();
                 continue;
             }
             else
@@ -110,24 +110,24 @@ while (true)
             }
 
     }
-    drawLine();
+    DrawLine();
     Console.WriteLine($"\tResultado: {answer}");
-    drawLine();
-    drawLine();
+    DrawLine();
+    DrawLine();
     Console.WriteLine("Continuar a operação? (S ou N).");
-    drawLine();
+    DrawLine();
 
     switch (Console.ReadLine()?.ToLower())
     {
         case "s":
-            drawLine();
+            DrawLine();
             Console.WriteLine("Armazenando resultado...");
-            drawLine();
+            DrawLine();
             continue;
         case "n":
-            drawLine();
+            DrawLine();
             Console.WriteLine("Finalizando...");
-            drawLine();
+            DrawLine();
             break;
     }
     break;
